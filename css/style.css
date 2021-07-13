@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ---------
+    Common 
+------------ */
+.container {
+    width: 1050px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* header */
+header {
+    align-items: center;
+    background: #2D25A0;
+    padding: 40px;
+    width: auto;
+    position: relative;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ;
+}
+
+header nav .menu ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+header nav .menu ul li a {
+    margin-right: 36px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+
+.login .btn {
+    background: #E02C6D;
+    color: #ffffff;
+    padding: 10px 24px;
+}
+
+.login .btn:hover {
+    background: #ffffff;
+    color: #E02C6D;
+    border: 1px solid #E02C6D;
+}
+
+.login .fa-sign-in-alt {
+    margin-right: 8px;
+}
+
+.banner {
+    margin-top: 50px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+}
+
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner .banner-text h1 {
+    font-size: 63px;
+    padding: 25px 40px 0;
+    text-align: initial;
+    margin: 0;
+    color: #ffffff;
+}
+
+.banner .banner-text .btn {
+    background: #E02C6D;
+    color: #ffffff;
+    padding: 10px 24px;
+    margin-left: 40px;
+    width: 170px;
+    margin-top: 20px;
+}
+
+.banner .banner-text .btn:hover {
+    background: #ffffff;
+    color: #E02C6D;
+    border: 1px solid #E02C6D;
+}
+
+.banner .banner-text .fa-arrow-right {
+    margin-left: 8px;
+}
+
+.banner .banner-img img {
+    width: 100%;
+    transition: transform 0.3s;
+}
+
+.banner .banner-img img:hover {
+    transform: scale(1.2);
+}
+
+
+
+/* --------
+Players
+----------- */
+.players {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 170px;
+}
+
+.players-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 45px;
+    grid-row-gap: 25px;
+}
+
+.players-list img {
+    width: 100%;
+}
+
+
+/* ------------
+Copa America
+--------------- */
+.copa-america {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 160px;
+}
+
+.copa-america-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 65px;
+    position: relative;
+}
+
+.copa-americia-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.copa-americia-text h1 {
+    font-size: 46px;
+    font-weight: 700;
+    color: #0A0826;
+    margin: 0;
+}
+
+.copa-americia-text .btn {
+    background: #E02C6D;
+    color: #ffffff;
+    padding: 10px 24px;
+    width: 170px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.copa-americia-text .btn:hover {
+    background: #ffffff;
+    color: #E02C6D;
+    border: 1px solid #E02C6D;
+}
+
+
+.copa-americia-img img {
+    width: 100%;
+}
+
+/* -----------
+Footer
+-------------- */
+.footer-items {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-img img {
+    width: 485px;
+}
+
+.social-icon i {
+    color: #969BAB;
+    font-size: 32px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 20px 15px;
+}
+
+.copyright p {
+    font-size: 18px;
+    color: #000000;
+}
+
+
+/* ------------
+Responsive
+-------------- */
+
+@media (max-width:991px) {
+
+    .menu {
+        position: fixed;
+        top: 100px;
+        left: -170%;
+        display: block;
+        text-align: center;
+        padding: 100px 0px;
+        width: 100%;
+        z-index: 999;
+        transition: 0.5s;
+        background: rgba(52, 73, 94);
+    }
+
+    .menu ul li {
+        display: block;
+    }
+
+    .menu ul li a {
+        color: #fff;
+        font-size: 24px;
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    .toggle {
+        width: 40px;
+        height: 40px;
+        background: url(../images/menu.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+        margin-right: 30px;
+    }
+
+    .toggle.active {
+        background: url(../images/close.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        cursor: pointer;
+        margin-right: 30px;
+    }
