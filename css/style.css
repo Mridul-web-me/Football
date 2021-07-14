@@ -4,7 +4,7 @@
     transition: 0.3s;
     scroll-behavior: smooth;
     box-sizing: border-box;
-    overflow-x: hidden;
+
 }
 
 body {
@@ -16,7 +16,6 @@ body {
     justify-content: center;
     align-items: center;
     background: #FFFFFF;
-
 }
 
 /* ---------
@@ -24,9 +23,6 @@ body {
 ------------ */
 .container {
     max-width: 1050px;
-    padding: 0 30px;
-    margin: 0 20px;
-
 
 }
 
@@ -34,7 +30,9 @@ a {
     text-decoration: none;
 }
 
-/* header */
+/* -----------
+    header 
+--------------*/
 header {
     align-items: center;
     background: #2D25A0;
@@ -136,16 +134,17 @@ header nav .menu ul li a {
 .banner .banner-img img {
     width: 100%;
     transition: transform 0.3s;
+    overflow-x: hidden;
 }
 
 .banner .banner-img img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 
 
 /* --------
-Players
+    Players
 ----------- */
 .players {
     display: flex;
@@ -160,6 +159,16 @@ Players
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 45px;
     grid-row-gap: 25px;
+}
+
+.players-list .player {
+    padding: 10px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+
+}
+
+.players-list .player:hover {
+    transform: translateY(-10%);
 }
 
 .players-list .player img {
@@ -178,7 +187,7 @@ Players
 }
 
 /* ------------
-Copa America
+    Copa America
 --------------- */
 .copa-america {
     display: flex;
@@ -244,7 +253,7 @@ Copa America
 }
 
 /* --------------
-Login Form
+    Login Form
 ------------------ */
 .login-form {
     display: flex;
@@ -310,7 +319,7 @@ Login Form
 }
 
 /* -----------
-Footer
+    Footer
 -------------- */
 .footer-items {
     display: flex;
@@ -339,8 +348,12 @@ Footer
 
 
 /* ------------
-Responsive
+    Responsive
 -------------- */
+
+/*------------
+ Tablet Devices 
+ --------------*/
 
 @media (max-width:991px) {
 
@@ -353,6 +366,7 @@ Responsive
         width: 100%;
         z-index: 999;
         transition: 0.5s;
+        height: 100vh;
         background: #2D25A0;
     }
 
@@ -378,7 +392,7 @@ Responsive
         background-repeat: no-repeat;
         background-size: 30px;
         cursor: pointer;
-        padding: 0 35px;
+        padding: 0 15px;
     }
 
     .toggle.active {
@@ -387,13 +401,7 @@ Responsive
         background-repeat: no-repeat;
         background-size: 25px;
         cursor: pointer;
-        padding: 0 35px;
-    }
-
-
-
-    .container {
-        width: 90%;
+        padding: 0 15px;
     }
 
     .players-list {
@@ -402,13 +410,19 @@ Responsive
     }
 
     .login-form {
-        width: 90%;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
     }
 
     .login-form .login-details {
-        width: 90%;
+        width: 100%;
+    }
+
+    .footer-img img {
+        width: 80%
+    }
+
+    .social-icon i {
+        font-size: 26px;
     }
 
 }
@@ -423,6 +437,10 @@ Mobile Devices
     .banner {
         flex-direction: column;
 
+    }
+
+    .banner .banner-text h1 {
+        font-size: 2em;
     }
 
     .banner-text {
@@ -461,10 +479,10 @@ Mobile Devices
     }
 
     .footer-img {
-        width: ;
+        width: 80%;
     }
 
     .footer-img img {
-        width: 100%;
+        width: 80%;
     }
 }
