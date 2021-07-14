@@ -360,6 +360,15 @@ header nav .menu ul li a {
 /*------------
  Tablet Devices 
  --------------*/
+@media (max-width:1024px) {
+    .container {
+        width: 90%;
+    }
+
+    .login-form .login-details {
+        width: 100%;
+    }
+}
 
 @media (max-width:991px) {
     .container {
