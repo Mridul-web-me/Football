@@ -1,16 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
+* {
+    transition: 0.3s;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+
 }
 
 /* ---------
     Common 
 ------------ */
 .container {
-    width: 1050px;
+    max-width: 1050px;
+    padding: 0 30px;
+    margin: 0 20px;
+
+
 }
 
 a {
@@ -22,15 +39,16 @@ header {
     align-items: center;
     background: #2D25A0;
     padding: 40px;
-    width: auto;
+    width: auto 0;
     position: relative;
+
 }
 
 header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    ;
+
 }
 
 header nav .menu ul li {
@@ -46,13 +64,16 @@ header nav .menu ul li a {
 }
 
 
-.login .btn {
+.login a {
     background: #E02C6D;
     color: #ffffff;
     padding: 10px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.login .btn:hover {
+.login a:hover {
     background: #ffffff;
     color: #E02C6D;
     border: 1px solid #E02C6D;
@@ -63,37 +84,41 @@ header nav .menu ul li a {
 }
 
 .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 50px;
     text-align: center;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     position: relative;
 }
 
 .banner-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 50%;
+    margin-right: 4%;
 }
 
 .banner .banner-text h1 {
-    font-size: 63px;
+    font-size: 3.8em;
     padding: 25px 40px 0;
     text-align: initial;
     margin: 0;
     color: #ffffff;
 }
 
-.banner .banner-text .btn {
+.banner .banner-text a {
     background: #E02C6D;
     color: #ffffff;
     padding: 10px 24px;
     margin-left: 40px;
     width: 170px;
     margin-top: 20px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.banner .banner-text .btn:hover {
+.banner .banner-text a:hover {
     background: #ffffff;
     color: #E02C6D;
     border: 1px solid #E02C6D;
@@ -101,6 +126,11 @@ header nav .menu ul li a {
 
 .banner .banner-text .fa-arrow-right {
     margin-left: 8px;
+}
+
+.banner-img {
+    width: 50%;
+    margin-left: 4%;
 }
 
 .banner .banner-img img {
@@ -132,10 +162,20 @@ Players
     grid-row-gap: 25px;
 }
 
-.players-list img {
+.players-list .player img {
     width: 100%;
 }
 
+.players-list .player h3 {
+    font-size: 28px;
+    color: #18191F;
+    margin: 16px 0 10px;
+}
+
+.players-list .player p {
+    font-size: 16px;
+    color: #6C6C6C;
+}
 
 /* ------------
 Copa America
@@ -148,17 +188,14 @@ Copa America
 }
 
 .copa-america-items {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 65px;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .copa-americia-text {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
+    width: 50%;
+    margin-right: 4%;
 }
 
 .copa-americia-text h1 {
@@ -168,24 +205,108 @@ Copa America
     margin: 0;
 }
 
-.copa-americia-text .btn {
+.copa-americia-text a {
     background: #E02C6D;
     color: #ffffff;
     padding: 10px 24px;
     width: 170px;
     margin-top: 20px;
     text-align: center;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.copa-americia-text .btn:hover {
+.copa-americia-text a:hover {
     background: #ffffff;
     color: #E02C6D;
     border: 1px solid #E02C6D;
+    outline: none;
 }
 
+.copa-americia-text a i {
+    padding-left: 10px;
+}
+
+.copa-americia-img {
+    width: 50%;
+    margin-left: 4%;
+}
 
 .copa-americia-img img {
     width: 100%;
+    transition: transform 0.3s;
+}
+
+.copa-americia-img img:hover {
+    transform: scale(1.2);
+}
+
+/* --------------
+Login Form
+------------------ */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 160px;
+    width: 1050px;
+}
+
+.login-form h1 {
+    font-size: 28px;
+    color: #18191F;
+    margin: 16px 0 10px;
+    text-align: center;
+}
+
+
+.login-form input {
+    width: 100%;
+    padding: 12px 30px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+
+}
+
+.login-form input:focus {
+    outline: 1px solid #6C6C6C;
+}
+
+.login-form .login-details {
+    position: relative;
+    width: 1050px;
+}
+
+.login-form .login-details i {
+    position: absolute;
+    padding: 20px 10px;
+}
+
+.login-form .login-details .forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.login-form .login-details .forgot p a {
+    text-decoration: underline;
+}
+
+.login-details button {
+    background: #E02C6D;
+    color: #ffffff;
+    padding: 10px 24px;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
 }
 
 /* -----------
@@ -208,6 +329,7 @@ Footer
     text-align: center;
     border-radius: 50%;
     padding: 20px 15px;
+    cursor: pointer;
 }
 
 .copyright p {
@@ -222,29 +344,29 @@ Responsive
 
 @media (max-width:991px) {
 
-    .menu {
+    header nav .menu {
         position: fixed;
         top: 100px;
         left: -170%;
-        display: block;
         text-align: center;
         padding: 100px 0px;
         width: 100%;
         z-index: 999;
         transition: 0.5s;
-        background: rgba(52, 73, 94);
+        background: #2D25A0;
     }
 
-    .menu ul li {
+    header nav .menu ul li {
         display: block;
+        padding: 20px;
     }
 
-    .menu ul li a {
+    .header nav .menu ul li a {
         color: #fff;
         font-size: 24px;
     }
 
-    .menu.active {
+    header nav .menu.active {
         left: 0;
     }
 
@@ -256,7 +378,7 @@ Responsive
         background-repeat: no-repeat;
         background-size: 30px;
         cursor: pointer;
-        margin-right: 30px;
+        padding: 0 35px;
     }
 
     .toggle.active {
@@ -265,5 +387,84 @@ Responsive
         background-repeat: no-repeat;
         background-size: 25px;
         cursor: pointer;
-        margin-right: 30px;
+        padding: 0 35px;
     }
+
+
+
+    .container {
+        width: 90%;
+    }
+
+    .players-list {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 30px;
+    }
+
+    .login-form {
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .login-form .login-details {
+        width: 90%;
+    }
+
+}
+
+
+/* ----------
+Mobile Devices
+-------------- */
+
+@media (max-width:688px) {
+
+    .banner {
+        flex-direction: column;
+
+    }
+
+    .banner-text {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .banner-img {
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    .players-list {
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 30px;
+        align-items: center;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .copa-america-items {
+        flex-direction: column;
+    }
+
+    .copa-americia-text {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 80px;
+    }
+
+    .copa-americia-img {
+        width: 100%;
+
+    }
+
+    .footer-img {
+        width: ;
+    }
+
+    .footer-img img {
+        width: 100%;
+    }
+}
