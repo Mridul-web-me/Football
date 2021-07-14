@@ -362,6 +362,9 @@ header nav .menu ul li a {
  --------------*/
 
 @media (max-width:991px) {
+    .container {
+        width: 90%;
+    }
 
     header nav .menu {
         position: fixed;
