@@ -96,7 +96,7 @@ header nav .menu ul li a {
 }
 
 .banner .banner-text h1 {
-    font-size: 3.8em;
+    font-size: 4em;
     padding: 25px 40px 0;
     text-align: initial;
     margin: 0;
@@ -184,6 +184,7 @@ header nav .menu ul li a {
 .players-list .player p {
     font-size: 16px;
     color: #6C6C6C;
+    font-weight: 400;
 }
 
 /* ------------
@@ -208,10 +209,15 @@ header nav .menu ul li a {
 }
 
 .copa-americia-text h1 {
-    font-size: 46px;
+    font-size: 3em;
     font-weight: 700;
     color: #0A0826;
     margin: 0;
+}
+
+.copa-americia-text p {
+    color: #6C6C6C;
+    font-weight: 400;
 }
 
 .copa-americia-text a {
