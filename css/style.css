@@ -338,6 +338,10 @@ header nav .menu ul li a {
     width: 485px;
 }
 
+.footer-img img:hover {
+    transform: scale(1.2);
+}
+
 .social-icon i {
     color: #969BAB;
     font-size: 32px;
